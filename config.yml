@@ -1,0 +1,33 @@
+dev:
+  logging:
+    outputType: file
+    filePath: ../logs.log
+
+  database:
+    host: localhost
+    port: 5432
+    user: postgres
+    password: postgres
+    dbname: books
+    sslmode: disable
+    populate:
+      migrate: true
+      init: true
+      file: init.sql
+
+test:
+  logging:
+    outputType: console
+    filePath: ../logs.log #ignored
+
+  database:
+    host: localhost
+    port: 5432
+    user: postgres
+    password: postgres
+    dbname: books_test
+    sslmode: disable
+    populate:
+      migrate: true
+      init: true
+      file: ../init_test.sql
