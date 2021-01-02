@@ -129,7 +129,6 @@ func (suite *BookServiceUnitTestSuite) TestUpdateStock_WithInvalidStockValue_Exp
 	_, err := suite.service.UpdateStock(int(book.ID), invalidStockCount)
 	a.NotNil(err)
 	a.Equal(service.InvalidArguments, err.(*service.ServiceError).Type)
-
 }
 
 func (suite *BookServiceUnitTestSuite) TestUpdateStock_WithInvalidBookID_ExpectNotFound() {
@@ -171,5 +170,36 @@ func (suite *BookServiceUnitTestSuite) TestUpdateStock_WithValidArgs_ExpectOk() 
 		Return(domain.NilRepoErrPtr)
 
 	_, err := suite.service.UpdateStock(int(book.ID), newStockCount)
+	a.Nil(err)
+}
+
+func (suite *BookServiceUnitTestSuite) TestDelete_WithInvalidID_ExpectNotFound() {
+	a := assert.New(suite.T())
+	id := 11234
+
+	suite.repo.
+		On("GetByID", id).
+		Return(domain.NilBookPtr, &domain.RepoError{Type: domain.NotFound})
+
+	err := suite.service.Delete(id)
+	a.NotNil(err)
+	a.Equal(service.NotFound, err.(*service.ServiceError).Type)
+}
+
+func (suite *BookServiceUnitTestSuite) TestDelete_WithValidID_ExpectOk() {
+	a := assert.New(suite.T())
+	id := 10000
+
+	suite.repo.
+		On("GetByID", id).
+		Return(domain.NilBookPtr, domain.NilRepoErrPtr)
+
+	suite.repo.
+		On("Delete", id).
+		Return(domain.NilRepoErrPtr)
+
+	err := suite.service.Delete(id)
+	suite.repo.AssertCalled(suite.T(), "GetByID", id)
+	suite.repo.AssertCalled(suite.T(), "Delete", id)
 	a.Nil(err)
 }

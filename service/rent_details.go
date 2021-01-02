@@ -96,7 +96,7 @@ func (r *RentDetailsService) UpdateToExpired() error {
 	for rent := range stream {
 		if rent.Status == domain.RENTED && rent.ReturnDeadline.Before(time.Now()) {
 			err := r.RentRepo.Update(&rent, updates)
-			if err != nil {
+			if err != domain.NilRepoErrPtr {
 				return RepoErrorToServiceError(err)
 			}
 		}

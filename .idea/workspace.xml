@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="05f0ed4c-6186-46b6-9c2d-ee6bb98be0b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/book.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/book.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/rent_details.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/rent_details.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/book.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/book.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/rent_details.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/rent_details.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/book_service_unit_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/book_service_unit_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,17 +38,29 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestCreate_WithEmptyObj_ExpectInvalidArguments in github.com/idj1997/book-rent-core/test">
-    <configuration name="TestCreate_WithEmptyObj_ExpectInvalidArguments in github.com/idj1997/book-rent-core/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.go test test">
+    <configuration name="TestDelete_WithInvalidID_ExpectNotFound in github.com/idj1997/book-rent-core/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="book-rent-core" />
       <working_directory value="$PROJECT_DIR$/test" />
-      <parameters value=" -testify.m ^TestCreate_WithEmptyObj_ExpectInvalidArguments$" />
+      <parameters value=" -testify.m ^TestDelete_WithInvalidID_ExpectNotFound$" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/idj1997/book-rent-core/test" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestBookServiceUnitTestSuite\E$/^\QTestCreate_WithEmptyObj_ExpectInvalidArguments\E$" />
+      <pattern value="^\QTestBookServiceUnitTestSuite\E$/^\QTestDelete_WithInvalidID_ExpectNotFound\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDelete_WithValidID_ExpectOk in github.com/idj1997/book-rent-core/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="book-rent-core" />
+      <working_directory value="$PROJECT_DIR$/test" />
+      <parameters value=" -testify.m ^TestDelete_WithValidID_ExpectOk$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/idj1997/book-rent-core/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestBookServiceUnitTestSuite\E$/^\QTestDelete_WithValidID_ExpectOk\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestRunTestSuite in github.com/idj1997/book-rent-core/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -63,22 +74,14 @@
       <pattern value="^\QTestRunTestSuite\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="book_repo_integration_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="book_service_unit_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="book-rent-core" />
       <working_directory value="$PROJECT_DIR$/test" />
       <framework value="gotest" />
       <kind value="FILE" />
+      <package value="github.com/idj1997/book-rent-core" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/test/book_repo_integration_test.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go test book-rent-core" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="book-rent-core" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/test/book_service_unit_test.go" />
       <method v="2" />
     </configuration>
     <configuration name="go test test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -86,17 +89,18 @@
       <working_directory value="$PROJECT_DIR$/test" />
       <framework value="gotest" />
       <kind value="DIRECTORY" />
+      <package value="github.com/idj1997/book-rent-core" />
       <directory value="$PROJECT_DIR$/test" />
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestCreate_WithEmptyObj_ExpectInvalidArguments in github.com/idj1997/book-rent-core/test" />
-        <item itemvalue="Go Test.TestRunTestSuite in github.com/idj1997/book-rent-core/test" />
         <item itemvalue="Go Test.go test test" />
-        <item itemvalue="Go Test.book_repo_integration_test.go" />
-        <item itemvalue="Go Test.go test book-rent-core" />
+        <item itemvalue="Go Test.book_service_unit_test.go" />
+        <item itemvalue="Go Test.TestDelete_WithValidID_ExpectOk in github.com/idj1997/book-rent-core/test" />
+        <item itemvalue="Go Test.TestDelete_WithInvalidID_ExpectNotFound in github.com/idj1997/book-rent-core/test" />
+        <item itemvalue="Go Test.TestRunTestSuite in github.com/idj1997/book-rent-core/test" />
       </list>
     </recent_temporary>
   </component>
@@ -117,6 +121,8 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/book_rent_core$go_test_test.out" NAME="go test test Coverage Results" MODIFIED="1609432633143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/book_rent_core$go_test_test.out" NAME="go test test Coverage Results" MODIFIED="1609591732408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/book_rent_core$book_service_unit_test_go.out" NAME="book_service_unit_test.go Coverage Results" MODIFIED="1609591495000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/book_rent_core$TestDelete_WithValidID_ExpectOk_in_github_com_idj1997_book_rent_core_test.out" NAME="TestDelete_WithValidID_ExpectOk in github.com/idj1997/book-rent-core/test Coverage Results" MODIFIED="1609591326793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

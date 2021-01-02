@@ -76,21 +76,15 @@ func (g *GormRentDetailsRepository) RentDetailsIterator(stream chan domain.RentD
 	defer close(stream)
 
 	// create rows struct
-	rows, err := g.Db.Model(&domain.RentDetails{}).
+	rows, _ := g.Db.Model(&domain.RentDetails{}).
 		Where("status != ?", domain.RETURNED).
 		Rows()
-	if err != nil {
-		return
-	}
 	defer rows.Close()
 
 	// iterate and stream results to channel
 	for rows.Next() {
 		var rent domain.RentDetails
-		err := g.Db.ScanRows(rows, &rent)
-		if err != nil {
-
-		}
+		g.Db.ScanRows(rows, &rent)
 		stream <- rent
 	}
 }

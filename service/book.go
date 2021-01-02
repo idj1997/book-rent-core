@@ -51,5 +51,11 @@ func (bs *BookService) UpdateStock(bookID int, newStock int) (*domain.Book, erro
 }
 
 func (bs *BookService) Delete(id int) error {
-	panic("not implemented")
+	_, err := bs.br.GetByID(id)
+	if err != domain.NilRepoErrPtr {
+		return RepoErrorToServiceError(err)
+	}
+
+	err = bs.br.Delete(id)
+	return RepoErrorToServiceError(err)
 }
