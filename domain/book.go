@@ -4,8 +4,8 @@ import "gorm.io/gorm"
 
 type Book struct {
 	gorm.Model
-	Title   string
-	Content string
+	Title   string `validate:"required"`
+	Content string `validate:"required"`
 	Stock   int
 }
 

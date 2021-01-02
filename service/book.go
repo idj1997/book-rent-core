@@ -1,6 +1,7 @@
 package service
 
 import (
+	"github.com/go-playground/validator"
 	"github.com/idj1997/book-rent-core/domain"
 )
 
@@ -23,6 +24,12 @@ func (bs *BookService) GetByTitle(title string) ([]domain.Book, error) {
 }
 
 func (bs *BookService) Create(book *domain.Book) (int, error) {
+	validate := validator.New()
+	validationErr := validate.Struct(book)
+	if validationErr != nil {
+		return 0, &ServiceError{Type: InvalidArguments}
+	}
+
 	id, err := bs.br.Create(book)
 	return int(id), RepoErrorToServiceError(err)
 }

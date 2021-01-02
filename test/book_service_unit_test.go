@@ -68,6 +68,19 @@ func (suite *BookServiceUnitTestSuite) TestGetByID_WithValidId_ExpectOk() {
 	a.Equal(book.Content, resultBook.Content)
 }
 
+func (suite *BookServiceUnitTestSuite) TestCreate_WithEmptyObj_ExpectInvalidArguments() {
+	a := assert.New(suite.T())
+	book := domain.Book{
+		Title:   "",
+		Content: "",
+		Stock:   0}
+
+	createdBookID, err := suite.service.Create(&book)
+	a.NotNil(err)
+	a.Equal(0, createdBookID)
+	a.Equal(service.InvalidArguments, err.(*service.ServiceError).Type)
+}
+
 func (suite *BookServiceUnitTestSuite) TestCreate_WithValidObj_ExpectOk() {
 	a := assert.New(suite.T())
 	book := domain.Book{

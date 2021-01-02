@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05f0ed4c-6186-46b6-9c2d-ee6bb98be0b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/book.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/book.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/book.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/book.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/book_service_unit_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/book_service_unit_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +39,19 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestRunTestSuite in github.com/idj1997/book-rent-core/test">
+  <component name="RunManager" selected="Go Test.TestCreate_WithEmptyObj_ExpectInvalidArguments in github.com/idj1997/book-rent-core/test">
+    <configuration name="TestCreate_WithEmptyObj_ExpectInvalidArguments in github.com/idj1997/book-rent-core/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="book-rent-core" />
+      <working_directory value="$PROJECT_DIR$/test" />
+      <parameters value=" -testify.m ^TestCreate_WithEmptyObj_ExpectInvalidArguments$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/idj1997/book-rent-core/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestBookServiceUnitTestSuite\E$/^\QTestCreate_WithEmptyObj_ExpectInvalidArguments\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestRunTestSuite in github.com/idj1997/book-rent-core/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="book-rent-core" />
       <working_directory value="$PROJECT_DIR$/test" />
@@ -75,6 +92,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestCreate_WithEmptyObj_ExpectInvalidArguments in github.com/idj1997/book-rent-core/test" />
         <item itemvalue="Go Test.TestRunTestSuite in github.com/idj1997/book-rent-core/test" />
         <item itemvalue="Go Test.go test test" />
         <item itemvalue="Go Test.book_repo_integration_test.go" />
@@ -93,6 +111,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
